@@ -28,6 +28,7 @@ export const Navbar = () => {
         width={80} // Ajusta el tamaño según sea necesario
         height={80}
         className="inline-block"
+        priority={true}
       />
           </NextLink>
         </NavbarBrand>

@@ -4,6 +4,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image"; // Importa el componente Image de Next.js
 
 const FullWidthCarousel = () => {
   return (
@@ -16,31 +17,39 @@ const FullWidthCarousel = () => {
       style={{ width: "100vw", height: "400px" }} // Ajusta la altura según lo necesites
     >
       <SwiperSlide>
-        <img
+        <Image
           src="/menDomo.jpg"
           alt="Slide 1"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          layout="fill" // Usa 'fill' para que ocupe el espacio del SwiperSlide
+          objectFit="cover" // Ajusta la imagen para cubrir el área sin distorsionarse
+          priority={true}
         />
       </SwiperSlide>
       <SwiperSlide>
-        <img
+        <Image
           src="/mainDomo.jpg"
           alt="Slide 2"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          layout="fill" // Usa 'fill' para que ocupe el espacio del SwiperSlide
+          objectFit="cover" // Ajusta la imagen para cubrir el área sin distorsionarse
+          priority={true}
         />
       </SwiperSlide>
       <SwiperSlide>
-        <img
+        <Image
           src="/rio.jpeg"
           alt="Slide 3"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          layout="fill" // Usa 'fill' para que ocupe el espacio del SwiperSlide
+          objectFit="cover" // Ajusta la imagen para cubrir el área sin distorsionarse
+          priority={true}
         />
       </SwiperSlide>
       <SwiperSlide>
-        <img
+        <Image
           src="/domoRio.jpg"
-          alt="Slide 3"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          alt="Slide 4"
+          layout="fill" // Usa 'fill' para que ocupe el espacio del SwiperSlide
+          objectFit="cover" // Ajusta la imagen para cubrir el área sin distorsionarse
+          priority={true}
         />
       </SwiperSlide>
     </Swiper>
@@ -48,3 +57,4 @@ const FullWidthCarousel = () => {
 };
 
 export default FullWidthCarousel;
+
