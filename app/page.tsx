@@ -85,7 +85,6 @@ export default function Home() {
                 name={profileData1.name}
                 role={profileData1.role}
                 description={profileData1.description}
-                profileType={profileData1.profileType}
               />
               </div>
 
@@ -95,7 +94,6 @@ export default function Home() {
                 name={profileData2.name}
                 role={profileData2.role}
                 description={profileData2.description}
-                profileType={profileData2.profileType}
                 reverseOrder={true}  // Puedes cambiar el orden de la imagen
               />
             </div>
