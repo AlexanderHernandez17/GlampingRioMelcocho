@@ -12,7 +12,7 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="inline-block max-w-xl text-center">
             <span className={title()}>Disfruta de una experiencia de &nbsp;</span>
-            <span className={title({ color: "violet" })}>ecoturismo&nbsp;</span>
+            <span className={title({ color: "green" })}>ecoturismo&nbsp;</span>
             <br />
             <span className={title()}>
               en las montañas de antioquia.

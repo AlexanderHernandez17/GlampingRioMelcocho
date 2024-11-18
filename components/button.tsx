@@ -8,7 +8,7 @@ export default function ButtonComponent() {
         href="https://wa.me/573146428400" // Cambia por tu número de WhatsApp
         target="_blank" // Abre en una nueva pestaña
         rel="noopener noreferrer" // Asegura la navegación segura
-        style={{ backgroundColor: 'violet', color: 'white' }} // Ajusta el color del texto según sea necesario
+        style={{ backgroundColor: 'green', color: 'white' }} // Ajusta el color del texto según sea necesario
         variant="shadow"
       >
         ¡Reserva ahora!
