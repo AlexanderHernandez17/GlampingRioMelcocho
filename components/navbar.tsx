@@ -18,15 +18,15 @@ import { ThemeSwitch } from "@/components/theme-switch";
 export const Navbar = () => {
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="full" position="sticky" className="py-8">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1 mt-8" href="/">
+          <NextLink className="flex justify-start items-center gap-1" href="/">
           <Image 
         src="/logoRioMelcocho.png" // Cambia a la ruta de tu logo
         alt="ACME Logo"
-        width={80} // Ajusta el tamaño según sea necesario
-        height={80}
+        width={90} // Ajusta el tamaño según sea necesario
+        height={90}
         className="inline-block"
         priority={true}
       />
