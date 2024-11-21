@@ -3,6 +3,11 @@ import { title, subtitle } from "@/components/primitives";
 import FullWidthCarousel from "@/components/carrusel";
 import ButtonComponent from "@/components/button";
 import ProfileCard from "@/components/domos";
+import Servicio from "@/components/servicios";
+import Mapa from "@/components/googleMaps";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 
 export default function Home() {
@@ -31,15 +36,27 @@ export default function Home() {
   const profileData1 = {
     imageSrc: "/mainDomo.jpg",
     name: "Domo Montaña",
-    role: "caracteristicas",
-    description: `aqui va la informacion y precio del domo`
+    role: "COP 375,000.00",
+    description: `El glamping con el mejor ambiente ecológico de Antioquia. 
+    Somos el único glamping ubicado en medio de una reserva forestal al borde 
+    del río más cristalino de todo Colombia. 
+
+    DÉJATE ENCANTAR POR EL MISTERIO, LA MARAVILLA Y LA BELLEZA DE LOS ANDES.
+  
+  - Hay WIFI y señal celular. 
+
+  Ideal para amantes de la naturaleza y aventureros que buscan sumegirse en la naturaleza, con tranquilidad, privacidad, glamour y estilo`
   };
 
   const profileData2 = {
     imageSrc: "/rio.jpeg",
     name: "Domo Rio",
-    role: "caracteristicas",
-    description: `aqui va la informacion y precio del domo`
+    role: "COP 350,000.00",
+    description: `Ubicado en el corazón de una reserva forestal, nuestro glamping ofrece una experiencia ecológica incomparable en Antioquia.
+     El único de su tipo, rodeado por la majestuosidad de la naturaleza y el agua más pura que puedas imaginar.
+     
+     DÉJATE ENCANTAR POR EL SONIDO RELAJANTE DEL RIO MELCOCHO.
+     `
   };
 
 
@@ -65,9 +82,11 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center mt-16">
           <div className="max-w-xl text-center">
           <span className={title({ color: "green" })}>Nuestros servicios&nbsp;</span>
-          <br/>
-          Aqui viene la lista de servicios
          </div>
+         </div>
+
+         <div className="flex flex-col items-center justify-center mt-16">
+         <Servicio/>
          </div>
 
          <div className="flex flex-col items-center justify-center mt-16">
@@ -97,8 +116,18 @@ export default function Home() {
                 reverseOrder={true}  // Puedes cambiar el orden de la imagen
               />
             </div>
+
+            <div className="flex flex-col items-center justify-center mt-14">
+            <span className={title({ color: "green" })}>Galeria de Visitantes ¡Antojate!&nbsp;</span>
+            </div>
+
+            <div className="flex flex-col items-center justify-center mt-14">
+            <span className={title({ color: "green" })}>Nuestra Ubicacion&nbsp;</span>
+            </div>
+
+            <div className="flex flex-col items-center justify-center mt-10">
+            <Mapa />
+            </div>
     </div>
   );
 }
-
-
