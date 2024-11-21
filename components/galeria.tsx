@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import 'swiper/css';
@@ -89,21 +89,25 @@ const Galeria: React.FC<CarruselProps> = ({ mediaUrl }) => {
 export default function CarruselComponent() {
   return (
     <div className="w-full">
-      <Swiper
-        modules={[Pagination, Navigation]}
-        spaceBetween={30}
-        loop={true}
-        pagination={{ clickable: true }}
-        navigation
-        breakpoints={{
-          640: { // configuración para pantallas pequeñas (móviles)
-            slidesPerView: 1,
-          },
-          1024: { // configuración para pantallas grandes (escritorio)
-            slidesPerView: 3,
-          },
-        }}
-      >
+<Swiper
+  modules={[Pagination, Navigation, Autoplay]} // Agrega Autoplay al array
+  spaceBetween={30}
+  loop={true}
+  autoplay={{
+    delay: 3000, // 3 segundos entre diapositivas
+    disableOnInteraction: false, // No detener al interactuar
+  }}
+  pagination={{ clickable: true }}
+  navigation
+  breakpoints={{
+    640: {
+      slidesPerView: 1,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  }}
+>
         {items.map((item, index) => (
           <SwiperSlide key={index}>
             <Galeria mediaUrl={item.mediaUrl} />
