@@ -45,7 +45,7 @@ const FullWidthCarousel = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Image
-          src="/domoRio.jpg"
+          src="/domo1.jpg"
           alt="Slide 4"
           layout="fill" // Usa 'fill' para que ocupe el espacio del SwiperSlide
           objectFit="cover" // Ajusta la imagen para cubrir el área sin distorsionarse

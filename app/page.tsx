@@ -1,5 +1,5 @@
 "use client";
-import { title, subtitle } from "@/components/primitives";
+import { title } from "@/components/primitives";
 import FullWidthCarousel from "@/components/carrusel";
 import ButtonComponent from "@/components/button";
 import ProfileCard from "@/components/domos";
@@ -7,6 +7,7 @@ import Servicio from "@/components/servicios";
 import Mapa from "@/components/googleMaps";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Galeria from "@/components/galeria";
 
 
 
@@ -37,26 +38,40 @@ export default function Home() {
     imageSrc: "/mainDomo.jpg",
     name: "Domo Montaña",
     role: "COP 375,000.00",
-    description: `El glamping con el mejor ambiente ecológico de Antioquia. 
-    Somos el único glamping ubicado en medio de una reserva forestal al borde 
-    del río más cristalino de todo Colombia. 
-
-    DÉJATE ENCANTAR POR EL MISTERIO, LA MARAVILLA Y LA BELLEZA DE LOS ANDES.
-  
-  - Hay WIFI y señal celular. 
-
-  Ideal para amantes de la naturaleza y aventureros que buscan sumegirse en la naturaleza, con tranquilidad, privacidad, glamour y estilo`
+    description:     <>
+    <p>
+      El glamping con el mejor ambiente ecológico de Antioquia. Somos el único
+      glamping ubicado en medio de una reserva forestal al borde del río más
+      cristalino de todo Colombia.
+    </p>
+    <p>DÉJATE ENCANTAR POR EL MISTERIO, LA MARAVILLA Y LA BELLEZA DE LOS ANDES.</p>
+    <ul className="list-disc ml-6 mt-2">
+      <li>Hay WIFI y señal celular.</li>
+    </ul>
+    <p>
+      Ideal para amantes de la naturaleza y aventureros que buscan sumergirse
+      en la naturaleza, con tranquilidad, privacidad, glamour y estilo.
+    </p>
+  </>
   };
 
   const profileData2 = {
     imageSrc: "/rio.jpeg",
     name: "Domo Rio",
     role: "COP 350,000.00",
-    description: `Ubicado en el corazón de una reserva forestal, nuestro glamping ofrece una experiencia ecológica incomparable en Antioquia.
-     El único de su tipo, rodeado por la majestuosidad de la naturaleza y el agua más pura que puedas imaginar.
-     
-     DÉJATE ENCANTAR POR EL SONIDO RELAJANTE DEL RIO MELCOCHO.
-     `
+    description:     <>
+    <p>
+      Ubicado en el corazón de una reserva forestal, nuestro glamping ofrece
+      una experiencia ecológica incomparable en Antioquia. El único de su tipo,
+      rodeado por la majestuosidad de la naturaleza y el agua más pura que
+      puedas imaginar.
+    </p>
+    <p>DÉJATE ENCANTAR POR EL SONIDO RELAJANTE DEL RIO MELCOCHO.</p>
+    <ul className="list-disc ml-6 mt-2">
+      <li>Ideal para quienes buscan desconexión total.</li>
+      <li>Perfecto para disfrutar de la tranquilidad del río.</li>
+    </ul>
+  </>
   };
 
 
@@ -117,8 +132,12 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex flex-col items-center justify-center mt-14">
+            <div className="flex flex-col items-center text-center justify-center mt-14">
             <span className={title({ color: "green" })}>Galeria de Visitantes ¡Antojate!&nbsp;</span>
+            </div>
+
+            <div className="flex flex-col items-center justify-center mt-10">
+              <Galeria/>
             </div>
 
             <div className="flex flex-col items-center justify-center mt-14">
