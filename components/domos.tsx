@@ -9,8 +9,8 @@ interface ProfileCardProps {
   imageSrc: string;
   name: string;
   role: string;
-  description: string;
-  reverseOrder?: boolean; // Propiedad para invertir el orden
+  description: string | JSX.Element; // Permite cadenas o JSX
+  reverseOrder?: boolean; // Si usas esta propiedad
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
